@@ -29,8 +29,8 @@ List<TourPoint> TourPoints = [
   new TourPoint(LatLng(50.559837, 9.680318), "Kneipe5" , "Die Kneipe ist Super", ["Wahrzeichen von Fulda", "Kathedrale des Bistums Fulda", "Grabeskirche des heiligen Bonifitus"]),
   new TourPoint(LatLng(50.559837, 9.680318), "Kneipe5" , "Die Kneipe ist Super", ["Wahrzeichen von Fulda", "Kathedrale des Bistums Fulda", "Grabeskirche des heiligen Bonifitus"]),
   new TourPoint(LatLng(50.559837, 9.680318), "Kneipe5" , "Die Kneipe ist Super", ["Wahrzeichen von Fulda", "Kathedrale des Bistums Fulda", "Grabeskirche des heiligen Bonifitus"]),
-
 ];
+
 bool IsOpenBottomSheet = false;
 TourPoint TargetPoint = TourPoints[TourIndex];
 final scaffoldState = GlobalKey<ScaffoldState>();
@@ -84,7 +84,6 @@ class _InitExampleState extends State {
                       ),
 
                       currentLocationLayerFunc(),
-
                       MarkerLayer(
 
                         markers: [
