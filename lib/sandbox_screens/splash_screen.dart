@@ -69,7 +69,13 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ],
               )
-            : Container(),
+            : Stack(children: [
+                SizedBox.expand(
+                  child: Container(
+                    color: Colors.black,
+                  ),
+                ),
+              ]),
       ),
     );
   }

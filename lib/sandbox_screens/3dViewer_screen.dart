@@ -11,7 +11,8 @@ class ModelView extends StatelessWidget {
     //src: "lib/assets/Mensa.glb"
     return Scaffold(
       appBar: AppBar(title: Text("Model Viewer")),
-      body: ModelViewer(src: 'lib/assets/G46.glb',
+      body: ModelViewer(
+        src: 'lib/assets/Mensa3.glb',
         alt: "A 3D model of an astronaut",
         autoRotate: false,
         cameraControls: false,
@@ -20,11 +21,8 @@ class ModelView extends StatelessWidget {
         arPlacement: ArPlacement.floor,
         arModes: ['scene-viewer', 'webxr', 'quick-look'],
         backgroundColor: Colors.transparent,
-        cameraOrbit: "90deg 90deg 100",
-        maxCameraOrbit: "115deg 90deg 100",
-        minCameraOrbit: "65deg 90deg 90deg",
+        cameraOrbit: "0deg 90deg 100",
         autoPlay: true,
-
       ),
     );
   }

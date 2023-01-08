@@ -58,7 +58,6 @@ class _InitExampleState extends State {
       timer = Timer.periodic(Duration(seconds: 5), (Timer t) => CheckDeviceLocation());
     });
 
-
   }
 
   @override
@@ -74,7 +73,6 @@ class _InitExampleState extends State {
               print("Getting Data");
               return Stack(
                 children: [
-
                   FlutterMap(
                     options:
                     MapOptions(center: LatLng(UserPosition!.latitude, UserPosition!.longitude), zoom: 17),
