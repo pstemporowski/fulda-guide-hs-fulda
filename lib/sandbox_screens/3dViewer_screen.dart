@@ -12,7 +12,7 @@ class ModelView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Model Viewer")),
       body: ModelViewer(
-        src: 'lib/assets/Mensa3.glb',
+        src: 'lib/assets/G22_20.glb',
         alt: "A 3D model of an astronaut",
         autoRotate: false,
         cameraControls: false,

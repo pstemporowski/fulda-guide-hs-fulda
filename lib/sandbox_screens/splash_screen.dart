@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fulda_guide/sandbox_screens/3dViewer_screen.dart';
+import 'package:fulda_guide/sandbox_screens/guidetour_screens.dart';
+import 'package:fulda_guide/screens/Home1.dart';
 import 'package:video_player/video_player.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -37,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // navigating to home screen
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-      return ModelView();
+      return Home1();
     }));
   }
 
