@@ -1,13 +1,12 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:fulda_guide/objects/Components.dart';
+import 'package:fulda_guide/sandbox_screens/guidetour_screens.dart';
 import 'Sehenswurdigkeiten.dart';
 import './Home1.dart';
 import 'package:adobe_xd/page_link.dart';
-import './Kneipen.dart';
-import './Freizeit.dart';
-import './Essen.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Hotspots extends StatelessWidget {
@@ -53,109 +52,130 @@ class Hotspots extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
             child: Column(
               children: [
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: SizedBox(
-                    width: 228.0,
-                    height: 71.0,
-                    child: Text(
-                      'HOTSPOTS',
-                      style: TextStyle(
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 50,
-                        color: const Color(0xffffffff),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GuideTour(
+                                  TourPoints: HotspotsList.TourPoints,
+                                )),
+                      )
+                    },
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "SEHENSWÜRDIGKEITEN",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      softWrap: false,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage(
+                          "lib/assets/images/dom.jpeg",
+                        ),
+                        fit: BoxFit.cover,
+                      )),
                     ),
                   ),
                 ),
                 Expanded(
-                    child: Column(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        child: Center(
-                          child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                              child: Text(
-                                "FREIZEIT",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold),
-                              )),
+                  child: GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GuideTour(
+                                  TourPoints: HotspotsList.Restaurants,
+                                )),
+                      )
+                    },
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "RESTAURANTS",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
                         ),
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage(
-                            "lib/assets/images/dom.jpeg",
-                          ),
-                          fit: BoxFit.cover,
-                        )),
                       ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        child: Center(
-                          child: Text(
-                            "FREIZEIT",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage(
+                          "lib/assets/images/restaurantIMG.jpg",
                         ),
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage(
-                            "lib/assets/images/freizeit.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        )),
-                      ),
+                        fit: BoxFit.cover,
+                      )),
                     ),
-                    Expanded(
-                      child: Container(
-                        child: Center(
-                          child: Text(
-                            "FREIZEIT",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
+                  ),
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GuideTour(
+                                  TourPoints: HotspotsList.Bars,
+                                )),
+                      )
+                    },
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "BARS",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
                         ),
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage(
-                            "lib/assets/images/freizeit.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        )),
                       ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        child: Center(
-                          child: Text(
-                            "FREIZEIT",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage(
+                          "lib/assets/images/bar.jpg",
                         ),
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage(
-                            "lib/assets/images/freizeit.jpg",
-                          ),
-                          fit: BoxFit.cover,
-                        )),
-                      ),
+                        fit: BoxFit.cover,
+                      )),
                     ),
-                  ],
-                ))
+                  ),
+                ),
+                Expanded(
+                  child: GestureDetector(
+                    onTap: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GuideTour(
+                                  TourPoints: HotspotsList.Leisure,
+                                )),
+                      )
+                    },
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          "FREIZEIT",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                        image: AssetImage(
+                          "lib/assets/images/freizeitIMG.jpg",
+                        ),
+                        fit: BoxFit.cover,
+                      )),
+                    ),
+                  ),
+                )
               ],
             ),
           ),

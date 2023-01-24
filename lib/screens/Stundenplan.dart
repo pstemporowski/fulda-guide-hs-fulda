@@ -3,12 +3,16 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:async';
+import 'package:adobe_xd/page_link.dart';
+
 import 'dart:convert';
 import 'package:icalendar_parser/icalendar_parser.dart';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'Home1.dart';
 
 final storage = const FlutterSecureStorage();
 
@@ -37,11 +41,18 @@ class Stundenplan extends StatelessWidget {
           Pin(size: 157.0, start: -8.0),
           child: Stack(
             children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: const AssetImage('lib/assets/images/Logo.png'),
-                    fit: BoxFit.fill,
+              PageLink(
+                links: [
+                  PageLinkInfo(
+                    pageBuilder: () => Home1(),
+                  ),
+                ],
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('lib/assets/images/Logo.png'),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ),

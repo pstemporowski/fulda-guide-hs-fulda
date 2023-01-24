@@ -25,12 +25,13 @@ class _MensaplanScreenState extends State<Mensaplan> {
   _fetchMensaplan() async {
     final response = await http.get(Uri.parse(
         "https://uni-giessen.maxmanager.xyz/extern/mensa-hochschule-fulda.json"));
-    print(response);
-    print("hallo");
+
     if (response.statusCode == 200) {
-      setState(() {
-        _mensaplan = json.decode(response.body)["items"];
-      });
+      if (this.mounted) {
+        setState(() {
+          _mensaplan = json.decode(response.body)["items"];
+        });
+      }
     } else {
       throw Exception('Failed to load mensaplan');
     }
@@ -100,11 +101,16 @@ class _MensaplanScreenState extends State<Mensaplan> {
                                         padding: const EdgeInsets.all(8.0),
                                         child: Column(
                                           children: <Widget>[
-                                            ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(50),
-                                              child:
-                                                  Image.network(meal['image']),
+                                            Container(
+                                              height: 250,
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                                child: Image.network(
+                                                  meal['image'],
+                                                  fit: BoxFit.contain,
+                                                ),
+                                              ),
                                             ),
                                             SizedBox(height: 12),
                                             Align(
@@ -229,7 +235,7 @@ class _MensaplanScreenState extends State<Mensaplan> {
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -245,7 +251,7 @@ class _MensaplanScreenState extends State<Mensaplan> {
       lastDate = date;
       return Text(
         text,
-        style: TextStyle(fontSize: 20),
+        style: TextStyle(fontSize: 20, color: Colors.white),
       );
     }
 
@@ -253,7 +259,7 @@ class _MensaplanScreenState extends State<Mensaplan> {
 
     print(text);
     lastDate = date;
-    return Text(text, style: TextStyle(fontSize: 20));
+    return Text(text, style: TextStyle(fontSize: 20, color: Colors.white));
   }
 }
 

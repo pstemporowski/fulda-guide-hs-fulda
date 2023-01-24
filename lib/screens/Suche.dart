@@ -16,6 +16,11 @@ class Suche extends StatelessWidget {
   Suche({
     Key? key,
   }) : super(key: key);
+  static const List<String> _kOptions = <String>[
+    'aardvark',
+    'bobcat',
+    'chameleon',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -195,18 +200,22 @@ class Suche extends StatelessWidget {
                               ),
                             ),
                             Align(
-                              alignment: Alignment(-0.031, 0.455),
-                              child: Container(
-                                width: 249.0,
-                                height: 35.0,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xffececec),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff707070)),
-                                ),
-                              ),
-                            ),
+                                alignment: Alignment(-0.031, 0.455),
+                                child: Autocomplete<String>(
+                                  optionsBuilder:
+                                      (TextEditingValue textEditingValue) {
+                                    if (textEditingValue.text == '') {
+                                      return const Iterable<String>.empty();
+                                    }
+                                    return _kOptions.where((String option) {
+                                      return option.contains(
+                                          textEditingValue.text.toLowerCase());
+                                    });
+                                  },
+                                  onSelected: (String selection) {
+                                    debugPrint('You just selected $selection');
+                                  },
+                                ))
                           ],
                         ),
                       ),
