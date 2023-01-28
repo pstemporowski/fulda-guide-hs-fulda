@@ -1,5 +1,5 @@
 name: fulda_guide
-description: A new Flutter project.
+description: Fulda Guide
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -58,6 +58,8 @@ dependencies:
   flutter_secure_storage: ^7.0.1
   url_launcher: ^6.1.8
   bordered_text: ^2.0.0
+  input_form_field: ^0.0.5
+  flutter_launcher_icons: ^0.11.0
 
 dev_dependencies:
   flutter_test:
@@ -72,11 +74,11 @@ dev_dependencies:
   cupertino_icons: ^1.0.2
   adobe_xd: ^2.0.0+1
   flutter_svg: ^1.1.6
-  flutter_launcher_icons: ^0.11.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -86,15 +88,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/Mensa.glb
-    - lib/assets/MensaS.glb
-    - lib/assets/Mensa3.glb
-    - lib/assets/MensaAnimation.glb
-    - lib/assets/G46.glb
-    - lib/assets/Logoanimation.mp4
     - lib/assets/images/
     - lib/assets/
     - lib/assets/obs_objects/
+    - lib/assets/logo/logo.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -133,3 +130,9 @@ flutter:
 flutter_native_splash:
   color: "#000000"
   color_dark: "#000000"
+
+flutter_icons:
+  #  image_path: "assets/images/icon-128x128.png"
+  android: "launcher_icon"
+  ios: true
+  image_path: "lib/assets/logo/logo.png"

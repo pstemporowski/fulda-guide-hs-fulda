@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'Campusplan.dart';
+import 'package:fulda_guide/objects/Building.dart';
+import 'package:fulda_guide/screens/Gebaeudeplan.dart';
+import 'package:input_form_field/input_form_field.dart';
 import 'Men.dart';
-import 'Stundenplan.dart';
 import './Home1.dart';
 import 'package:adobe_xd/page_link.dart';
-import './Essen.dart';
-import './Anleitungenvalidieren.dart';
-import './Hotspots.dart';
-import './Kneipen.dart';
-import './Freizeit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Suche extends StatelessWidget {
+  final TextEditingController _controller = TextEditingController();
+
   Suche({
     Key? key,
   }) : super(key: key);
-  static const List<String> _kOptions = <String>[
-    'aardvark',
-    'bobcat',
-    'chameleon',
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +25,10 @@ class Suche extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(0.0, 111.0, 0.0, 0.0),
             child: SizedBox.expand(
                 child: SvgPicture.string(
-              _svg_q46b9e,
-              allowDrawingOutsideViewBox: true,
-              fit: BoxFit.fill,
-            )),
+                  _svg_q46b9e,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                )),
           ),
           Pinned.fromPins(
             Pin(size: 222.0, middle: 0.5),
@@ -95,7 +88,7 @@ class Suche extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         color: const Color(0xff000000),
                                         borderRadius:
-                                            BorderRadius.circular(2.0),
+                                        BorderRadius.circular(2.0),
                                       ),
                                     ),
                                   ),
@@ -106,7 +99,7 @@ class Suche extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         color: const Color(0xff000000),
                                         borderRadius:
-                                            BorderRadius.circular(2.0),
+                                        BorderRadius.circular(2.0),
                                       ),
                                     ),
                                   ),
@@ -117,7 +110,7 @@ class Suche extends StatelessWidget {
                                       decoration: BoxDecoration(
                                         color: const Color(0xff000000),
                                         borderRadius:
-                                            BorderRadius.circular(2.0),
+                                        BorderRadius.circular(2.0),
                                       ),
                                     ),
                                   ),
@@ -140,7 +133,7 @@ class Suche extends StatelessWidget {
               children: <Widget>[
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
-                  Pin(size: 160.0, start: 0.0),
+                  Pin(size: 200.0, start: 0.0),
                   child: Stack(
                     children: <Widget>[
                       Pinned.fromPins(
@@ -164,7 +157,7 @@ class Suche extends StatelessWidget {
                                 'Suche',
                                 style: TextStyle(
                                   fontFamily: 'Source Sans Pro',
-                                  fontSize: 30,
+                                  fontSize: 27,
                                   color: const Color(0xfff5f5f5),
                                 ),
                                 softWrap: false,
@@ -186,35 +179,47 @@ class Suche extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Pinned.fromPins(
-                              Pin(size: 192.0, middle: 0.4973),
-                              Pin(size: 31.0, start: 15.0),
-                              child: Text(
-                                'wonach suchst du?',
-                                style: TextStyle(
-                                  fontFamily: 'Segoe UI',
-                                  fontSize: 23,
-                                  color: const Color(0xff707070),
-                                ),
-                                softWrap: false,
-                              ),
-                            ),
                             Align(
                                 alignment: Alignment(-0.031, 0.455),
-                                child: Autocomplete<String>(
-                                  optionsBuilder:
-                                      (TextEditingValue textEditingValue) {
-                                    if (textEditingValue.text == '') {
-                                      return const Iterable<String>.empty();
-                                    }
-                                    return _kOptions.where((String option) {
-                                      return option.contains(
-                                          textEditingValue.text.toLowerCase());
-                                    });
-                                  },
-                                  onSelected: (String selection) {
-                                    debugPrint('You just selected $selection');
-                                  },
+                                child: Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: InputFormField(
+                                        textEditingController: _controller,
+                                        borderColor: const Color(0xff82a47d),
+                                        labelTextStyle: TextStyle(
+                                          color: Color(0xff82a47d),
+                                        ),
+                                        labelText: "Gebäude",
+                                        hintText: "z.B. 46.122",
+                                        bottomMargin: 10, // Optional
+                                      ),
+                                    ),
+                                    Center(
+                                      child: GestureDetector(
+                                        onTap: () => {
+                                          searchTapped(
+                                              context, _controller.text)
+                                        },
+                                        child: Center(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(12),
+                                                color: Colors.green),
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text('Suchen',
+                                                  style: TextStyle(
+                                                      color: Colors.white)),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
                                 ))
                           ],
                         ),
@@ -239,7 +244,7 @@ class Suche extends StatelessWidget {
                         Pin(start: 29.0, end: 27.0),
                         Pin(size: 62.0, start: 18.0),
                         child: Text(
-                          'Vorschläge:\n',
+                          'Richtig nach Gebäuden suchen:\n',
                           style: TextStyle(
                             fontFamily: 'Segoe UI',
                             fontSize: 23,
@@ -249,92 +254,40 @@ class Suche extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      Pinned.fromPins(
-                        Pin(start: 40.0, end: 46.0),
-                        Pin(size: 35.0, middle: 0.3557),
-                        child: PageLink(
-                          links: [
-                            PageLinkInfo(
-                              pageBuilder: () => Anleitungenvalidieren(),
-                            ),
-                          ],
-                          child: Text(
-                            'Studentenausweis validieren',
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 22,
-                              color: const Color(0xff707070),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment(-0.003, 0.036),
-                        child: SizedBox(
-                          width: 92.0,
-                          height: 31.0,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                pageBuilder: () => Hotspots(),
-                              ),
-                            ],
-                            child: Text(
-                              'Hotspots',
+                      Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '46.122',
                               style: TextStyle(
                                 fontFamily: 'Segoe UI',
-                                fontSize: 23,
+                                fontSize: 22,
                                 color: const Color(0xff707070),
                               ),
                               softWrap: false,
                             ),
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment(-0.004, 0.36),
-                        child: SizedBox(
-                          width: 128.0,
-                          height: 31.0,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                pageBuilder: () => Stundenplan(),
-                              ),
-                            ],
-                            child: Text(
-                              'Stundenplan',
+                            Text(
+                              'oder',
                               style: TextStyle(
                                 fontFamily: 'Segoe UI',
-                                fontSize: 23,
+                                fontSize: 22,
                                 color: const Color(0xff707070),
                               ),
                               softWrap: false,
                             ),
-                          ),
-                        ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 126.0, middle: 0.498),
-                        Pin(size: 31.0, end: 40.0),
-                        child: PageLink(
-                          links: [
-                            PageLinkInfo(
-                              pageBuilder: () => Campusplan(),
+                            Text(
+                              '46',
+                              style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 22,
+                                color: const Color(0xff707070),
+                              ),
+                              softWrap: false,
                             ),
                           ],
-                          child: Text(
-                            'Campusplan',
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 23,
-                              color: const Color(0xff707070),
-                            ),
-                            softWrap: false,
-                          ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -344,6 +297,25 @@ class Suche extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  RegExp buildingExp = RegExp(r'(^[0-9]{2}$|^[0-9]{2}\.[0-9]{3}$)');
+  RegExp buildingExpDetail = RegExp(r'(^[0-9]{2}\.[0-9]{3}$)');
+
+  void searchTapped(BuildContext context, String text) {
+    text = text.trim();
+    if (buildingExp.hasMatch(text)) {
+      if (buildingExpDetail.hasMatch(text)) {
+        text = text.substring(0, 2);
+        print(text);
+      }
+      var building = Buildings.getBuilding(text);
+      if (building != null)
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Gebaeudeplan(building: building)));
+    }
   }
 }
 

@@ -19,106 +19,211 @@ class Anleitungen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff82a47d),
-      body: Stack(
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.fromLTRB(0.0, 111.0, 0.0, 0.0),
-            child: Stack(
-              children: <Widget>[
-                SizedBox.expand(
-                    child: SvgPicture.string(
-                  _svg_q46b9e,
-                  allowDrawingOutsideViewBox: true,
-                  fit: BoxFit.fill,
-                )),
-              ],
+      body: Center(
+        child: Stack(
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.fromLTRB(0.0, 111.0, 0.0, 0.0),
+              child: Stack(
+                children: <Widget>[
+                  SizedBox.expand(
+                      child: SvgPicture.string(
+                    _svg_q46b9e,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  )),
+                ],
+              ),
             ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 222.0, middle: 0.5),
-            Pin(start: -8.0, end: -70.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 157.0, start: 0.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        pageBuilder: () => Home1(),
-                      ),
-                    ],
-                    child: Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: const AssetImage('lib/assets/images/Logo.png'),
-                          fit: BoxFit.fill,
+            Pinned.fromPins(
+              Pin(size: 222.0, middle: 0.5),
+              Pin(start: -8.0, end: -70.0),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 157.0, start: 0.0),
+                    child: PageLink(
+                      links: [
+                        PageLinkInfo(
+                          pageBuilder: () => Home1(),
+                        ),
+                      ],
+                      child: Container(
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image:
+                                const AssetImage('lib/assets/images/Logo.png'),
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment(0.012, 1.0),
-                  child: SizedBox(
-                    width: 137.0,
-                    height: 139.0,
-                    child: PageLink(
-                      links: [
-                        PageLinkInfo(
-                          pageBuilder: () => Men(),
+                  Align(
+                    alignment: Alignment(0.012, 1.0),
+                    child: SizedBox(
+                      width: 137.0,
+                      height: 139.0,
+                      child: PageLink(
+                        links: [
+                          PageLinkInfo(
+                            pageBuilder: () => Men(),
+                          ),
+                        ],
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xfcdfdfdf),
+                                borderRadius: BorderRadius.all(
+                                    Radius.elliptical(9999.0, 9999.0)),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment(0.0, -0.469),
+                              child: SizedBox(
+                                width: 39.0,
+                                height: 26.0,
+                                child: Stack(
+                                  children: <Widget>[
+                                    Pinned.fromPins(
+                                      Pin(start: 0.0, end: 0.0),
+                                      Pin(size: 3.0, start: 0.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xff000000),
+                                          borderRadius:
+                                              BorderRadius.circular(2.0),
+                                        ),
+                                      ),
+                                    ),
+                                    Pinned.fromPins(
+                                      Pin(start: 0.0, end: 0.0),
+                                      Pin(size: 3.0, end: 0.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xff000000),
+                                          borderRadius:
+                                              BorderRadius.circular(2.0),
+                                        ),
+                                      ),
+                                    ),
+                                    Pinned.fromPins(
+                                      Pin(start: 0.0, end: 0.0),
+                                      Pin(size: 3.0, middle: 0.5217),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xff000000),
+                                          borderRadius:
+                                              BorderRadius.circular(2.0),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Pinned.fromPins(
+              Pin(start: 26.0, end: 25.0),
+              Pin(size: 635.0, end: 96.0),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 0.0),
+                    Pin(size: 48.0, start: 0.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xff2e5d29),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(24.0),
+                          topRight: Radius.circular(24.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(size: 200.0, start: 85),
+                    Pin(size: 43.0, start: 0),
+                    child: Text(
+                      'Anleitungen',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 30,
+                        color: const Color(0xfff5f5f5),
+                      ),
+                      softWrap: false,
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xffffffff),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(27.0),
+                        bottomLeft: Radius.circular(27.0),
+                      ),
+                    ),
+                    margin: EdgeInsets.fromLTRB(0.0, 48.0, 0.0, 0.0),
+                  ),
+                ],
+              ),
+            ),
+            Pinned.fromPins(
+              Pin(size: 280.0, start: 54.0),
+              Pin(size: 127.0, middle: 0.4062),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 17.0, end: 0.0),
+                    Pin(size: 43.0, start: 0.0),
+                    child: Text(
+                      'Studentenausweis',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 30,
+                        color: const Color(0xff000000),
+                      ),
+                      softWrap: false,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment(-1.0, -0.079),
+                    child: SizedBox(
+                      height: 38.0,
                       child: Stack(
                         children: <Widget>[
-                          Container(
-                            decoration: BoxDecoration(
-                              color: const Color(0xfcdfdfdf),
-                              borderRadius: BorderRadius.all(
-                                  Radius.elliptical(9999.0, 9999.0)),
+                          Center(
+                            child: Text(
+                              'validieren',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 23,
+                                color: const Color(0xff707070),
+                              ),
+                              softWrap: false,
                             ),
                           ),
-                          Align(
-                            alignment: Alignment(0.0, -0.469),
-                            child: SizedBox(
-                              width: 39.0,
-                              height: 26.0,
-                              child: Stack(
-                                children: <Widget>[
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(size: 3.0, start: 0.0),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xff000000),
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
-                                      ),
-                                    ),
-                                  ),
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(size: 3.0, end: 0.0),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xff000000),
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
-                                      ),
-                                    ),
-                                  ),
-                                  Pinned.fromPins(
-                                    Pin(start: 0.0, end: 0.0),
-                                    Pin(size: 3.0, middle: 0.5217),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xff000000),
-                                        borderRadius:
-                                            BorderRadius.circular(2.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                          PageLink(
+                            links: [
+                              PageLinkInfo(
+                                pageBuilder: () => Anleitungenvalidieren(),
+                              ),
+                            ],
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(19.0),
+                                border: Border.all(
+                                    width: 1.0, color: const Color(0xff707070)),
                               ),
                             ),
                           ),
@@ -126,302 +231,199 @@ class Anleitungen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(start: 26.0, end: 25.0),
-            Pin(size: 635.0, end: 96.0),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 0.0),
-                  Pin(size: 48.0, start: 0.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xff2e5d29),
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(24.0),
-                        topRight: Radius.circular(24.0),
-                      ),
-                    ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 152.0, middle: 0.4846),
-                  Pin(size: 43.0, start: 5.0),
-                  child: Text(
-                    'Anleitungen',
-                    style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 30,
-                      color: const Color(0xfff5f5f5),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(27.0),
-                      bottomLeft: Radius.circular(27.0),
-                    ),
-                  ),
-                  margin: EdgeInsets.fromLTRB(0.0, 48.0, 0.0, 0.0),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 248.0, start: 54.0),
-            Pin(size: 127.0, middle: 0.4062),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 17.0, end: 0.0),
-                  Pin(size: 43.0, start: 0.0),
-                  child: Text(
-                    'Studentenausweis',
-                    style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 30,
-                      color: const Color(0xff000000),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-1.0, -0.079),
-                  child: SizedBox(
-                    width: 154.0,
-                    height: 38.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(size: 98.0, middle: 0.5),
-                          Pin(start: 2.0, end: 5.0),
-                          child: Text(
-                            'validieren',
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 23,
-                              color: const Color(0xff707070),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              pageBuilder: () => Anleitungenvalidieren(),
-                            ),
-                          ],
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(19.0),
-                              border: Border.all(
-                                  width: 1.0, color: const Color(0xff707070)),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: SizedBox(
-                    width: 154.0,
-                    height: 38.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(size: 88.0, middle: 0.5),
-                          Pin(start: 4.0, end: 3.0),
-                          child: Text(
-                            'aufladen',
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 23,
-                              color: const Color(0xff707070),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              pageBuilder: () => Anleitungenaufladen(),
-                            ),
-                          ],
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(19.0),
-                              border: Border.all(
-                                  width: 1.0, color: const Color(0xff707070)),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 201.0, start: 54.0),
-            Pin(size: 81.0, middle: 0.5476),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 10.0, end: 0.0),
-                  Pin(size: 43.0, start: 0.0),
-                  child: Text(
-                    'Internetzugang',
-                    style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 30,
-                      color: const Color(0xff000000),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: SizedBox(
-                    width: 154.0,
-                    height: 38.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(size: 92.0, middle: 0.5),
-                          Pin(start: 3.0, end: 4.0),
-                          child: Text(
-                            'eduroam',
-                            style: TextStyle(
-                              fontFamily: 'Segoe UI',
-                              fontSize: 23,
-                              color: const Color(0xff707070),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                        PageLink(
-                          links: [
-                            PageLinkInfo(
-                              pageBuilder: () => Anleitungeneduroam(),
-                            ),
-                          ],
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(19.0),
-                              border: Border.all(
-                                  width: 1.0, color: const Color(0xff707070)),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 225.0, start: 54.0),
-            Pin(size: 128.0, middle: 0.7114),
-            child: Stack(
-              children: <Widget>[
-                Pinned.fromPins(
-                  Pin(start: 14.0, end: 0.0),
-                  Pin(size: 43.0, start: 0.0),
-                  child: Text(
-                    'Ansprechpartner',
-                    style: TextStyle(
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 30,
-                      color: const Color(0xff000000),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 33.0),
-                  Pin(size: 38.0, middle: 0.4556),
-                  child: Stack(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(17.0, 2.0, 17.0, 5.0),
-                        child: SizedBox.expand(
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: SizedBox(
+                      height: 38.0,
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromPins(
+                            Pin(size: 100.0, middle: 0.5),
+                            Pin(start: 4.0, end: 3.0),
                             child: Text(
-                          'Rechenzentrum',
-                          style: TextStyle(
-                            fontFamily: 'Segoe UI',
-                            fontSize: 23,
-                            color: const Color(0xff707070),
+                              'aufladen',
+                              style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 23,
+                                color: const Color(0xff707070),
+                              ),
+                              softWrap: false,
+                            ),
                           ),
-                          softWrap: false,
-                        )),
-                      ),
-                      PageLink(
-                        links: [
-                          PageLinkInfo(
-                            pageBuilder: () => AnleitungenRechenzentrum(),
+                          PageLink(
+                            links: [
+                              PageLinkInfo(
+                                pageBuilder: () => Anleitungenaufladen(),
+                              ),
+                            ],
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(19.0),
+                                border: Border.all(
+                                    width: 1.0, color: const Color(0xff707070)),
+                              ),
+                            ),
                           ),
                         ],
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(19.0),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff707070)),
-                          ),
-                        ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 0.0, end: 33.0),
-                  Pin(size: 38.0, end: 0.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        pageBuilder: () => AnleitungenStudienbro(),
+                ],
+              ),
+            ),
+            Pinned.fromPins(
+              Pin(size: 250.0, start: 54.0),
+              Pin(size: 81.0, middle: 0.5476),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 10.0, end: 0.0),
+                    Pin(size: 43.0, start: 0.0),
+                    child: Text(
+                      'Internetzugang',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 30,
+                        color: const Color(0xff000000),
                       ),
-                    ],
+                      softWrap: false,
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: SizedBox(
+                      height: 38.0,
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromPins(
+                            Pin(size: 100.0, middle: 0.5),
+                            Pin(start: 3.0, end: 4.0),
+                            child: Text(
+                              'eduroam',
+                              style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 23,
+                                color: const Color(0xff707070),
+                              ),
+                              softWrap: false,
+                            ),
+                          ),
+                          PageLink(
+                            links: [
+                              PageLinkInfo(
+                                pageBuilder: () => Anleitungeneduroam(),
+                              ),
+                            ],
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(19.0),
+                                border: Border.all(
+                                    width: 1.0, color: const Color(0xff707070)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Pinned.fromPins(
+              Pin(size: 270.0, start: 54.0),
+              Pin(size: 128.0, middle: 0.7114),
+              child: Stack(
+                children: <Widget>[
+                  Pinned.fromPins(
+                    Pin(start: 14.0, end: 0.0),
+                    Pin(size: 43.0, start: 0.0),
+                    child: Text(
+                      'Ansprechpartner',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 30,
+                        color: const Color(0xff000000),
+                      ),
+                      softWrap: false,
+                    ),
+                  ),
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 33.0),
+                    Pin(size: 38.0, middle: 0.4556),
                     child: Stack(
                       children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(size: 124.0, middle: 0.4559),
-                          Pin(start: 4.0, end: 3.0),
-                          child: Text(
-                            'Studienbüro',
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(17.0, 2.0, 17.0, 5.0),
+                          child: SizedBox.expand(
+                              child: Text(
+                            'Rechenzentrum',
+                            textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'Segoe UI',
                               fontSize: 23,
                               color: const Color(0xff707070),
                             ),
                             softWrap: false,
-                          ),
+                          )),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(19.0),
-                            border: Border.all(
-                                width: 1.0, color: const Color(0xff707070)),
+                        PageLink(
+                          links: [
+                            PageLinkInfo(
+                              pageBuilder: () => AnleitungenRechenzentrum(),
+                            ),
+                          ],
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(19.0),
+                              border: Border.all(
+                                  width: 1.0, color: const Color(0xff707070)),
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
+                  Pinned.fromPins(
+                    Pin(start: 0.0, end: 33.0),
+                    Pin(size: 38.0, end: 0.0),
+                    child: PageLink(
+                      links: [
+                        PageLinkInfo(
+                          pageBuilder: () => AnleitungenStudienbro(),
+                        ),
+                      ],
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromPins(
+                            Pin(size: 150.0, middle: 0.4559),
+                            Pin(start: 4.0, end: 3.0),
+                            child: Text(
+                              'Studienbüro',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: 'Segoe UI',
+                                fontSize: 23,
+                                color: const Color(0xff707070),
+                              ),
+                              softWrap: false,
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(19.0),
+                              border: Border.all(
+                                  width: 1.0, color: const Color(0xff707070)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

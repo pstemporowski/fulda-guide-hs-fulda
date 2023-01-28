@@ -165,7 +165,7 @@ class Anleitungenaufladen extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromPins(
-                              Pin(size: 231.0, middle: 0.5),
+                              Pin(size: 260.0, middle: 0.5),
                               Pin(start: 5.0, end: 0.0),
                               child: Text(
                                 'Studentenausweis',
@@ -194,7 +194,7 @@ class Anleitungenaufladen extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromPins(
-                              Pin(size: 111.0, middle: 0.5),
+                              Pin(size: 120.0, middle: 0.5),
                               Pin(size: 43.0, start: 7.0),
                               child: Text(
                                 'aufladen',
@@ -209,7 +209,6 @@ class Anleitungenaufladen extends StatelessWidget {
                             Align(
                               alignment: Alignment(0.0, 0.529),
                               child: SizedBox(
-                                width: 227.0,
                                 height: 31.0,
                                 child: Text(
                                   'Gebäude: Mensa, links',

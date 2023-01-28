@@ -146,7 +146,7 @@ class Anleitungenvalidieren extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromPins(
-                              Pin(size: 231.0, middle: 0.5),
+                              Pin(size: 280.0, middle: 0.5),
                               Pin(start: 5.0, end: 0.0),
                               child: Text(
                                 'Studentenausweis',
@@ -177,7 +177,6 @@ class Anleitungenvalidieren extends StatelessWidget {
                             Align(
                               alignment: Alignment(-0.006, 0.529),
                               child: SizedBox(
-                                width: 214.0,
                                 height: 31.0,
                                 child: Text(
                                   'Gebäude: SSC, rechts',
@@ -191,7 +190,7 @@ class Anleitungenvalidieren extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromPins(
-                              Pin(size: 124.0, middle: 0.498),
+                              Pin(size: 140, middle: 0.498),
                               Pin(size: 43.0, start: 7.0),
                               child: Text(
                                 'validieren',

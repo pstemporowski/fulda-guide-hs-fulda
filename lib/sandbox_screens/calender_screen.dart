@@ -12,7 +12,6 @@ class CalenderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("Got into building");
     ICalendar obj;
     //obj = Future.wait(getFile()).whenComplete() => null)
     //print(icsObj.readLines);
@@ -27,7 +26,6 @@ class CalenderScreen extends StatelessWidget {
                     child: SfCalendar(
                   dataSource: snapshot.data,
                     view: CalendarView.workWeek,
-
                  ),
               );
               }else {

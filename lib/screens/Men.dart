@@ -22,22 +22,19 @@ class Men extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(start: 104.0, end: 104.0),
-            Pin(size: 157.0, start: 8.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  pageBuilder: () => Home1(),
-                ),
-              ],
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: const AssetImage('lib/assets/images/Logo.png'),
-                    fit: BoxFit.fill,
+            Pin(size: 222.0, middle: 0.5),
+            Pin(size: 157.0, start: -8.0),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('lib/assets/images/Logo.png'),
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
           ),
           Padding(

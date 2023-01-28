@@ -141,7 +141,7 @@ class AnleitungenStudienbro extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 211.0, middle: 0.5),
+                        Pin(size: 235.0, middle: 0.5),
                         Pin(start: 3.0, end: 2.0),
                         child: Text(
                           'Ansprechpartner',
@@ -170,7 +170,7 @@ class AnleitungenStudienbro extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 156.0, middle: 0.4978),
+                        Pin(size: 175.0, middle: 0.4978),
                         Pin(size: 43.0, start: 24.0),
                         child: Text(
                           'Studienbüro',
@@ -240,16 +240,6 @@ class AnleitungenStudienbro extends StatelessWidget {
                               ),
                               TextSpan(
                                 text: ' 0661 9640 1420\n',
-                              ),
-                              TextSpan(
-                                text: 'Mail:',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                              TextSpan(
-                                text:
-                                    ' https://www.hs-fulda.de/studieren/mein-studium/studium-organisieren/kontakt-studienbuero\n',
                               ),
                             ],
                           ),

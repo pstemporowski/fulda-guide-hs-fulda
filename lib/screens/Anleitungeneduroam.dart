@@ -143,7 +143,7 @@ class Anleitungeneduroam extends StatelessWidget {
                         ),
                       ),
                       Pinned.fromPins(
-                        Pin(size: 191.0, middle: 0.5),
+                        Pin(size: 215.0, middle: 0.5),
                         Pin(start: 3.0, end: 2.0),
                         child: Text(
                           'Internetzugang',
@@ -178,7 +178,6 @@ class Anleitungeneduroam extends StatelessWidget {
                             Align(
                               alignment: Alignment.topCenter,
                               child: SizedBox(
-                                width: 114.0,
                                 height: 43.0,
                                 child: Text(
                                   'eduroam',
@@ -214,17 +213,7 @@ class Anleitungeneduroam extends StatelessWidget {
                                                 children: [
                                                   TextSpan(
                                                     text:
-                                                        '1. Folge diesem Link:\nhttps://doku.rz.hs-fulda.de/doku.php/docs:wlan_eduroam\n\n2. Wähle dein entsprechendes Gerät oder Betriebssystem aus.\n\n3. Folge dann der entsprechenden Anleitung\n\n4. Bei Fragen kannst du dich an das  ',
-                                                  ),
-                                                  TextSpan(
-                                                    text: 'Rechenzentrum',
-                                                    style: TextStyle(
-                                                      color: const Color(
-                                                          0xff407e39),
-                                                    ),
-                                                  ),
-                                                  TextSpan(
-                                                    text: ' wenden',
+                                                        '1. Folge diesem Link:\nhttps://doku.rz.hs-fulda.de/doku.php/docs:wlan_eduroam\n\n2. Wähle dein entsprechendes Gerät oder Betriebssystem aus.\n\n3. Folge dann der entsprechenden Anleitung\n\n4. Bei Fragen kannst du dich an das Rechenzentrum wenden ',
                                                   ),
                                                 ],
                                               ),

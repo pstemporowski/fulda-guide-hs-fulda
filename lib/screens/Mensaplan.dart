@@ -25,11 +25,11 @@ class _MensaplanScreenState extends State<Mensaplan> {
   _fetchMensaplan() async {
     final response = await http.get(Uri.parse(
         "https://uni-giessen.maxmanager.xyz/extern/mensa-hochschule-fulda.json"));
-
+    var responseDecoded = json.decode(utf8.decode(response.bodyBytes));
     if (response.statusCode == 200) {
       if (this.mounted) {
         setState(() {
-          _mensaplan = json.decode(response.body)["items"];
+          _mensaplan = responseDecoded["items"];
         });
       }
     } else {
@@ -83,7 +83,8 @@ class _MensaplanScreenState extends State<Mensaplan> {
                         : ListView.builder(
                             itemCount: _mensaplan.length,
                             itemBuilder: (BuildContext context, int index) {
-                              final meal = _mensaplan[index];
+                              var meal = _mensaplan[index];
+                              print(meal['beschreibung_clean']);
                               return Column(
                                 children: [
                                   getText(DateTime.parse(meal['date'])),

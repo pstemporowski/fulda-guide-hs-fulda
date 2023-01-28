@@ -179,7 +179,7 @@ Widget _buildPopupDialog(BuildContext context) {
       children: <Widget>[
         Text("1. Sie müssen sich mit dem Handy-Browser auf Horstl anmelden",
             style: TextStyle(fontSize: 15)),
-        Text("2. Auf den Button 'Daten für iCalendar(ics) exportieren'",
+        Text("2. Auf den Button 'Daten für iCalendar(ics) exportieren' klicken",
             style: TextStyle(fontSize: 15)),
         Text(
             "3. nach dem 'Verstanden'-Klicken kommt ein Fenster wo man die herruntergeladene Datei auswählen muss",
