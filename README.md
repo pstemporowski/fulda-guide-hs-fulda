@@ -1,16 +1,7 @@
-# fulda_guide
+# Fulda Guide
 
-A new Flutter project.
+Es wird in einem Team von 6 Personen entwickelt.
 
-## Getting Started
+Diese App wird im Rahmen des Moduls "Bachelor Projekt" erstellt. Sie soll als Hilfe für die Erstis an der Hochschule Fulda gelten.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Funktionen von der App sind: Gebäude- und Raumsuche auf dem Campus, Tipps und Informationen über den Anfang an der Uni, Informationen über Fulda sammeln, interaktiver Tourguide durch Fulda usw.
